@@ -4,22 +4,46 @@ from rest_framework import generics
 from .models import *
 from .serializers import *
 
-class ListApiView2(generics.ListAPIView):
-    queryset = Person.objects.all()
-    serializer_class =PersonSerializers
 
-class Id(generics.RetrieveAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializers
+# Diller Serializer
+class Diller_View(generics.ListAPIView):
+    queryset = Diller.objects.all()
+    serializer_class = DillerSerializers
 
-class Delete(generics.DestroyAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializers
+class Diller_Id(generics.RetrieveAPIView):
+    queryset = Diller.objects.all()
+    serializer_class = DillerSerializers
 
-class Update(generics.UpdateAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializers
+class Diller_Delete(generics.DestroyAPIView):
+    queryset = Diller.objects.all()
+    serializer_class = DillerSerializers
 
-class Create(generics.CreateAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializers
+class Diller_Update(generics.UpdateAPIView):
+    queryset = Diller.objects.all()
+    serializer_class = DillerSerializers
+
+class Diller_Create(generics.CreateAPIView):
+    queryset = Diller.objects.all()
+    serializer_class = DillerSerializers
+
+
+# Product Serializer
+class Product_View(generics.ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializers
+
+class Product_Id(generics.RetrieveAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializers
+
+class Product_Delete(generics.DestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializers
+
+class Product_Update(generics.UpdateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializers
+
+class Product_Create(generics.CreateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializers

@@ -5,9 +5,16 @@ from .views import *
 app_name = "main"
 
 urlpatterns = [
-    path('',ListApiView2.as_view()),
-    path('<int:pk>/',Id.as_view()),
-    path('<int:pk>/delete/',Delete.as_view()),
-    path('<int:pk>/update/',Update.as_view()),
-    path('create/',Create.as_view()),
+    # diller
+    path('diller/',Diller_View.as_view()),
+    path('diller/<int:pk>/',Diller_Id.as_view()),
+    path('diller/<int:pk>/',Diller_Delete.as_view()),
+    path('diller/<int:pk>/',Diller_Update.as_view()),
+    path('diller/create/',Diller_Create.as_view()),
+    # product
+    path('product/',Product_View.as_view()),
+    path('product/<int:pk>/',Product_Id.as_view()),
+    path('product/<int:pk>/',Product_Delete.as_view()),
+    path('product/<int:pk>/',Product_Update.as_view()),
+    path('product/create/',Product_Create.as_view()),
 ]
